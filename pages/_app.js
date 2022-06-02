@@ -11,11 +11,10 @@ function MyApp({ Component, pageProps }) {
       <NavBar Hamburger={Hamburger} setHamburger={setHamburger} />
       <div className={Hamburger ? 'body-anime-on-mob-menu-active' : "body-anime-on-mob-menu"}>
         <Component {...pageProps} />
+        <FooTer />
       </div>
-      <FooTer />
     </>
   )
-
 }
 
 export default MyApp;

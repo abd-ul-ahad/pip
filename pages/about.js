@@ -1,4 +1,4 @@
-import HeadersSection from '../components/HeadersSection';
+import HeadersSection, { SocialAnime } from '../components/HeadersSection';
 import { Container } from 'react-bootstrap';
 import Head from 'next/head';
 
@@ -14,6 +14,7 @@ export default function About() {
                     desc="Best Free and Premium Static and Animated Banners"
                     col={3}
                 />
+            <SocialAnime />
             </Container>
         </>
     )

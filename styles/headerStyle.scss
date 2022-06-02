@@ -71,3 +71,10 @@
     transition: all 0.2s ease-in-out;
     color: var(--export-btn-color);
 }
+
+.social-Cont{
+    & img{
+        border-radius: 15px ;
+        height: 6.25rem;
+    }
+}

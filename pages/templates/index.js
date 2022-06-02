@@ -23,7 +23,7 @@ export default function Templates() {
         <HeadersSection heading="Free Animated Graphics Maker"
           desc="Choose one of our high quality animated banners and you'll have it in less than a minute! Completely free of charge!"
         />
-        <BannerSection title="More Templates" linkMore={false} bannerType="banner" bannersData={bannersData} />
+        <BannerSection title="Templates" linkMore={false} bannerType="banner" bannersData={bannersData} />
       </Container>
     </>
   )
