@@ -2,9 +2,9 @@ import { useRouter } from 'next/router';
 import CreateBanner from '../../../../components/CreateBanner';
 import { useState } from 'react';
 import Head from 'next/head';
-import { useEffect } from 'react';
 
-export default function ID () {
+
+export default function ID() {
     const { id } = useRouter().query;
     const [text1, setText1] = useState('');
     const [text2, setText2] = useState('');
@@ -19,7 +19,7 @@ export default function ID () {
             </div>,
             redirect: "/export/icons/0"
         },
-        {  
+        {
             title: "Animated",
             desc: "Free Discord Icon Makers",
             htmlContent: <div className="temp2Container">
@@ -29,22 +29,20 @@ export default function ID () {
         }
     ];
 
-    if (id) {
-        for (let i = 0; i < bannersData.length; i++) {
-            switch (id) {
-                case `${i}`:
-                    return (
-                        <>
-                            <Head>
-                                <title>Pip Makers | Create</title>
-                                <link rel="icon" href="/images/favicon.ico" />
-                            </Head>
-                            <CreateBanner htmlContent={bannersData[i].htmlContent} setText2={setText2} text1={text1} text2={text2} setText1={setText1} exportLink={bannersData[i].redirect} />
-                        </>
-                    )
-                default:
-                    break;
-            }
+    for (let i in bannersData) {
+        switch (id) {
+            case `${i}`:
+                return (
+                    <>
+                        <Head>
+                            <title>Pip Makers | Create</title>
+                            <link rel="icon" href="/images/favicon.ico" />
+                        </Head>
+                        <CreateBanner htmlContent={bannersData[i].htmlContent} setText2={setText2} text1={text1} text2={text2} setText1={setText1} exportLink={bannersData[i].redirect} />
+                    </>
+                )
+            default:
+                break;
         }
     }
 }

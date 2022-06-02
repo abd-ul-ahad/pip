@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import HeadersSection from '../components/HeadersSection'
-import { Container } from 'react-bootstrap'
+import Head from 'next/head';
+import HeadersSection from '../components/HeadersSection';
+import { Container } from 'react-bootstrap';
 
 export default function Home() {
   return (

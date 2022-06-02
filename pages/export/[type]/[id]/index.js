@@ -46,8 +46,8 @@ export default function Home() {
             });
     }
 
-    if (id) {
-        for (let i = 0; i < bannersData.length; i++) {
+    
+        for (let i in bannersData) {
             switch (id) {
                 case `${i}`:
                     return (
@@ -73,5 +73,5 @@ export default function Home() {
                     break;
             }
         }
-    }
+    
 }

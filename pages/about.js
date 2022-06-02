@@ -1,8 +1,8 @@
-import HeadersSection from '../components/HeadersSection'
-import { Container } from 'react-bootstrap'
-import Head from 'next/head'
+import HeadersSection from '../components/HeadersSection';
+import { Container } from 'react-bootstrap';
+import Head from 'next/head';
 
-const About = () => {
+export default function About () {
     return (
         <>
             <Head>
@@ -18,5 +18,3 @@ const About = () => {
         </>
     )
 }
-
-export default About

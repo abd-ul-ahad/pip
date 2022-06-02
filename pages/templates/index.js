@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { Container } from 'react-bootstrap'
+import Head from 'next/head';
+import { Container } from 'react-bootstrap';
 import BannerSection from '../../components/BannerSection';
 import HeadersSection from '../../components/HeadersSection';
 

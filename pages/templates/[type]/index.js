@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
 import HeadersSection from '../../../components/HeadersSection';
@@ -10,6 +10,10 @@ export default function Type() {
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
 
+  useEffect(() => {
+    setText1(localStorage.getItem('text__pip__one'));
+    setText2(localStorage.getItem('text__pip__two'));
+  }, []);
 
   const bannersData = [
     {
@@ -44,6 +48,5 @@ export default function Type() {
         <BannerSection title="Icons" bannerType="productbanner" linkMore={false} bannersData={bannersData} />
       </Container>
     </>
-
   )
 }
