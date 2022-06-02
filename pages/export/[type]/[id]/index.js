@@ -2,6 +2,8 @@ import Head from "next/head";
 import { AiOutlineExport } from "react-icons/ai";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import * as htmlToImage from 'html-to-image';
+import { saveAs } from 'file-saver';
 
 export default function Home() {
     const { id } = useRouter().query;
@@ -33,6 +35,17 @@ export default function Home() {
         }
     ];
 
+    const exportToImage = () => {
+        htmlToImage.toBlob(document.getElementById('downloadBox'))
+            .then(function (blob) {
+                if (window.saveAs) {
+                    window.saveAs(blob, 'my-node.png');
+                } else {
+                    saveAs(blob, 'my-node.png');
+                }
+            });
+    }
+
     if (id) {
         for (let i = 0; i < bannersData.length; i++) {
             switch (id) {
@@ -44,11 +57,14 @@ export default function Home() {
                                 <link rel="icon" href="/images/favicon.ico" />
                             </Head>
                             <div className='d-flex justify-content-center align-items-center py-5 my-4 flex-column'>
-                                <div className='exportContainerDiscordIcons'>
-                                    {bannersData[i].htmlContent}
+                                <div className="templateContainer">
+                                    <div className='exportContainerDiscordIcons' id="downloadBox">
+                                        {bannersData[i].htmlContent}
+                                    </div>
                                 </div>
+
                                 <div className='my-4'>
-                                    <button className='blueBtn'>Export <AiOutlineExport /></button>
+                                    <button className='blueBtn' onClick={() => { exportToImage() }}>Export <AiOutlineExport /></button>
                                 </div>
                             </div>
                         </>
