@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import HeadersSection from '../../../components/HeadersSection';
 import BannerSection from '../../../components/BannerSection';
 import Head from 'next/head';
+import PathNotFound from '../../../components/PathNotFound';
 
 export default function Type() {
   const { type } = useRouter().query;
@@ -35,19 +36,24 @@ export default function Type() {
     }
   ];
 
-  return (
-    <>
-      <Head>
-        <title>Pip Makers | {(type || "").charAt(0).toUpperCase() + (type || "").slice(1)}</title>
-        <link rel="icon" href="/images/favicon.ico" />
-      </Head>
-      <Container>
-        <HeadersSection heading="Free Animated Graphics Maker"
-          desc="Choose one of our high quality animated banners and you'll have it in less than a minute! Completely free of charge!"
-        />
-        <BannerSection title="Icons" bannerType="productbanner" linkMore={false} bannersData={bannersData} />
-      </Container>
-    </>
-  )
+  switch (type) {
+    case 'icons':
+      return (
+        <>
+          <Head>
+            <title>Pip Makers | {(type || "").charAt(0).toUpperCase() + (type || "").slice(1)}</title>
+            <link rel="icon" href="/images/favicon.ico" />
+          </Head>
+          <Container>
+            <HeadersSection heading="Free Animated Graphics Maker"
+              desc="Choose one of our high quality animated banners and you'll have it in less than a minute! Completely free of charge!"
+            />
+            <BannerSection title="Icons" bannerType="productbanner" linkMore={false} bannersData={bannersData} />
+          </Container>
+        </>
+      )
+    default:
+      return <PathNotFound />
+  }
 }
 

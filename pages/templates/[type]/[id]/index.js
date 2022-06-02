@@ -3,7 +3,6 @@ import CreateBanner from '../../../../components/CreateBanner';
 import { useState } from 'react';
 import Head from 'next/head';
 
-
 export default function ID() {
     const { id } = useRouter().query;
     const [text1, setText1] = useState('');
@@ -29,6 +28,7 @@ export default function ID() {
         }
     ];
 
+
     for (let i in bannersData) {
         switch (id) {
             case `${i}`:
@@ -45,4 +45,5 @@ export default function ID() {
                 break;
         }
     }
+
 }

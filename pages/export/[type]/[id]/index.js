@@ -46,7 +46,6 @@ export default function Home() {
             });
     }
 
-
     for (let i in bannersData) {
         switch (id) {
             case `${i}`:

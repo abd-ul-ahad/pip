@@ -12,7 +12,7 @@
 
 *::selection {
     color: var(--selection-color);
-    background-color: var(--selection-bg-color)
+    background-color: var(--selection-bg-color);
 }
 
 @import "navbarStyles.scss";
@@ -25,4 +25,8 @@
 
 p {
     margin-bottom: 0 !important;
+}
+
+.error-404{
+    height: 70vh;
 }

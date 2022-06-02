@@ -2,7 +2,7 @@ import HeadersSection from '../components/HeadersSection';
 import { Container } from 'react-bootstrap';
 import Head from 'next/head';
 
-export default function About () {
+export default function About() {
     return (
         <>
             <Head>
