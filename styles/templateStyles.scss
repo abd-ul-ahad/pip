@@ -1,0 +1,32 @@
+.sampleBannerTextSize  {
+    font-size: 10px;
+}
+
+.templateContainer{
+    cursor: default;
+    box-shadow: var(--template-border-style);
+    pointer-events: none;
+}
+
+.template {
+    position: relative;
+    
+    & span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    & h1 {
+        color: white;
+        font-weight: 900;
+        margin-bottom: 0px !important;
+        min-width: 100px;
+    }
+}

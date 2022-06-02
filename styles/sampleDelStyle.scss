@@ -1,0 +1,44 @@
+.temp1H2 {
+    font-size: 50px;
+    margin: 0;
+    writing-mode: vertical-lr;
+    text-align: center;
+    line-height: .9;
+    font-family: "didot";
+    color: black;
+  }
+  
+  
+  .temp1Rotate {
+    transform: rotate(180deg);
+  }
+  
+  .temp1Div {
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: max-content max-content;
+  }
+  
+  ////////////////Template 2
+  
+  
+  
+  .temp2Container {
+    background-color: #111111;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .temp2Heading{
+    font-size: 50px;
+    text-shadow: 4px 4px 0px #3F7FBF;
+    mix-blend-mode: screen;
+    font-family: sans-serif;
+  }
+  
