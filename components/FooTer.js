@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
 
 export default function FooTer() {
     return (
@@ -10,7 +9,7 @@ export default function FooTer() {
                 <Col className="d-flex justify-content-start align-items-center my-2">
                     <Link href="/">
                         <a className="navLogo">
-                            <Image src='/images/logo.png' height={45} width={100} alt='PPIMAKERS' />
+                            <img src='/images/logo.png' height={45} width={100} alt='PPIMAKERS' />
                         </a>
                     </Link>
                 </Col>

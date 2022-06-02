@@ -1,7 +1,6 @@
 import { Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import Image from 'next/image';
 
 export default function BannerSection({ title, bannersData, seeMore, linkMore, bannerType }) {
     return (
@@ -42,7 +41,7 @@ function Banners({ imgSrc, title, desc, redirect }) {
         <Col md={3} className='bannerBox d-flex justify-content-center flex-column align-items-center mx-4 my-2'>
             <Link href={redirect || "/"}>
                 <a className='textDecNone d-flex justify-content-center flex-column align-items-center px-4 py-4'>
-                    <Image width={200} height={100} src={imgSrc} className="my-2"  alt='' />
+                    <img width={200} height={100} src={imgSrc} className="my-2"  alt='' />
                     <p className="text-center my-2" >{title}</p>
                     <h5 className="text-center my-2">{desc}</h5>
                 </a>

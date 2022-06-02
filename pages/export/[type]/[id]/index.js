@@ -46,32 +46,32 @@ export default function Home() {
             });
     }
 
-    
-        for (let i in bannersData) {
-            switch (id) {
-                case `${i}`:
-                    return (
-                        <>
-                            <Head>
-                                <title>Pip Makers | Export</title>
-                                <link rel="icon" href="/images/favicon.ico" />
-                            </Head>
-                            <div className='d-flex justify-content-center align-items-center py-5 my-4 flex-column'>
-                                <div className="templateContainer">
-                                    <div className='exportContainerDiscordIcons' id="downloadBox">
-                                        {bannersData[i].htmlContent}
-                                    </div>
-                                </div>
 
-                                <div className='my-4'>
-                                    <button className='blueBtn' onClick={() => { exportToImage() }}>Export <AiOutlineExport /></button>
+    for (let i in bannersData) {
+        switch (id) {
+            case `${i}`:
+                return (
+                    <>
+                        <Head>
+                            <title>Pip Makers | Export</title>
+                            <link rel="icon" href="/images/favicon.ico" />
+                        </Head>
+                        <div className='d-flex justify-content-center align-items-center py-5 my-4 flex-column'>
+                            <div className="templateContainer">
+                                <div className='exportContainerDiscordIcons' id="downloadBox">
+                                    {bannersData[i].htmlContent}
                                 </div>
                             </div>
-                        </>
-                    )
-                default:
-                    break;
-            }
+
+                            <div className='my-4'>
+                                <button className='blueBtn' onClick={() => { exportToImage() }}>Export <AiOutlineExport /></button>
+                            </div>
+                        </div>
+                    </>
+                )
+            default:
+                break;
         }
-    
+    }
+
 }
