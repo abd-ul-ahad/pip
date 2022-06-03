@@ -72,9 +72,18 @@
     color: var(--export-btn-color);
 }
 
-.social-Cont{
-    & img{
-        border-radius: 15px ;
+.social-Cont {
+    & img {
+        border-radius: 15px;
         height: 6.25rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .social-Cont {
+        & img {
+            border-radius: 15px;
+            height: 5.25rem;
+        }
     }
 }

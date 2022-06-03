@@ -37,6 +37,9 @@ export default function ID() {
                         <Head>
                             <title>Pip Makers | Create</title>
                             <link rel="icon" href="/images/favicon.ico" />
+                            <meta name="description" content="Free Animated Graphics for your Discord Icons" />
+                            <meta name="keywords" content="canva, pipmakers, pip, makers, templates, discord icons, discord, icons, dp, profile picture"></meta>
+                            <meta name="author" content="Pip Makers"></meta>
                         </Head>
                         <CreateBanner htmlContent={bannersData[i].htmlContent} setText2={setText2} text1={text1} text2={text2} setText1={setText1} exportLink={bannersData[i].redirect} />
                     </>

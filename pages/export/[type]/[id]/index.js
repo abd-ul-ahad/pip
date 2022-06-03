@@ -54,6 +54,9 @@ export default function Home() {
                         <Head>
                             <title>Pip Makers | Export</title>
                             <link rel="icon" href="/images/favicon.ico" />
+                            <meta name="description" content="Free Animated Graphics for your Discord Icons" />
+                            <meta name="keywords" content="canva, pipmakers, pip, makers, templates, discord icons, discord, icons, dp, profile picture"></meta>
+                            <meta name="author" content="Pip Makers"></meta>
                         </Head>
                         <div className='d-flex justify-content-center align-items-center py-5 my-4 flex-column'>
                             <div className="templateContainer">

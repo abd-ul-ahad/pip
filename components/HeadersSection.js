@@ -8,7 +8,7 @@ export default function HeadersSection({ heading, desc }) {
                     <h1 className='my-2 h3Heading text-start w-100'>{heading}</h1>
                     <i className='my-2 text-start w-100'>{desc}</i>
                 </Col>
-                <Col md={7} className='d-flex justify-content-end align-items-center'>
+                <Col md={7} sm={12} className='d-flex justify-content-md-end justify-content-sm-center align-items-center'>
                     <img height={312} src="/images/headerImage.gif" alt="Pip Makers" />
                 </Col>
             </Row>
